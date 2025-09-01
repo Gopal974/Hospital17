@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dermaco Hospital - Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="header-left">
+        <h1>🏥 Dermaco Hospital</h1>
+      </div>
+      <div class="header-right">
+        <nav>
+          <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#patients">Patients</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#aboutModal">About</a></li>
+            <li><a href="#loginOptionsModal" class="login-btn">Login</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="dashboard" class="dashboard">
+      <h2>📊 Hospital Dashboard</h2>
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-icon">👨‍⚕️</div>
+          <div class="stat-info">
+            <h3>120</h3>
+            <p>Total Patients</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🩺</div>
+          <div class="stat-info">
+            <h3>25</h3>
+            <p>Doctors</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-info">
+            <h3>15</h3>
+            <p>Today's Appointments</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏥</div>
+          <div class="stat-info">
+            <h3>8</h3>
+            <p>Departments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="patients" class="patient-list">
+      <h2>👥 Patient Management</h2>
+      <div class="search-container">
+        <input type="text" placeholder="🔍 Search patients by name or ID..." class="search-input" />
+        <button class="add-btn">+ Add Patient</button>
+      </div>
+      <div class="patient-grid">
+        <div class="patient-card">
+          <div class="patient-avatar">👨</div>
+          <div class="patient-info">
+            <h4>John Doe</h4>
+            <p>Age: 30 | ID: P001</p>
+            <p class="condition">Condition: Flu</p>
+            <div class="status admitted">Admitted</div>
+          </div>
+        </div>
+        <div class="patient-card">
+          <div class="patient-avatar">👩</div>
+          <div class="patient-info">
+            <h4>Jane Smith</h4>
+            <p>Age: 25 | ID: P002</p>
+            <p class="condition">Condition: Checkup</p>
+            <div class="status outpatient">Outpatient</div>
+          </div>
+        </div>
+        <div class="patient-card">
+          <div class="patient-avatar">👨</div>
+          <div class="patient-info">
+            <h4>Michael Brown</h4>
+            <p>Age: 40 | ID: P003</p>
+            <p class="condition">Condition: Surgery</p>
+            <div class="status critical">Critical</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="doctors" class="doctors-section">
+      <h2>👨‍⚕️ Medical Staff</h2>
+      <div class="doctors-grid">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👨‍⚕️</div>
+          <h4>Dr. Smith Johnson</h4>
+          <p>Cardiologist</p>
+          <div class="availability available">Available</div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-avatar">👩‍⚕️</div>
+          <h4>Dr. Emily Davis</h4>
+          <p>Neurologist</p>
+          <div class="availability busy">In Surgery</div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-avatar">👨‍⚕️</div>
+          <h4>Dr. Robert Wilson</h4>
+          <p>Pediatrician</p>
+          <div class="availability available">Available</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="appointments" class="appointments-section">
+      <h2>📅 Appointments</h2>
+      <div class="appointment-controls">
+        <button class="schedule-btn">Schedule New</button>
+        <select class="filter-select">
+          <option>Today</option>
+          <option>This Week</option>
+          <option>This Month</option>
+        </select>
+      </div>
+      <div class="appointments-list">
+        <div class="appointment-item">
+          <div class="time">09:00 AM</div>
+          <div class="details">
+            <h4>John Doe</h4>
+            <p>Dr. Smith Johnson - Cardiology</p>
+          </div>
+          <div class="status confirmed">Confirmed</div>
+        </div>
+        <div class="appointment-item">
+          <div class="time">11:30 AM</div>
+          <div class="details">
+            <h4>Jane Smith</h4>
+            <p>Dr. Emily Davis - Neurology</p>
+          </div>
+          <div class="status pending">Pending</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <h2>🏥 Hospital Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">❤️</div>
+          <h4>Cardiology</h4>
+          <p>Heart care specialists</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧠</div>
+          <h4>Neurology</h4>
+          <p>Brain & nervous system</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👶</div>
+          <h4>Pediatrics</h4>
+          <p>Children's healthcare</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🦴</div>
+          <h4>Orthopedics</h4>
+          <p>Bone & joint care</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>🏥 Dermaco Hospital</h4>
+        <p>Excellence in Healthcare</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📧 info@dermacohospital.com</p>
+        <p>☎️ 123-456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h4>Emergency</h4>
+        <p>🚨 24/7 Emergency: 911</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Gopal kumar purbey</p>
+      <p>&copy;   2024 Dermaco Hospital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Login Options Modal -->
+  <div id="loginOptionsModal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close-btn">&times;</a>
+      <div class="modal-header">
+        <h2>🔐 Choose Login Type</h2>
+        <p>Select your role to login</p>
+      </div>
+      <div class="login-options-row">
+        <button class="option-btn patient-login" onclick="window.location.href='#patientLoginModal'">👤 Patient Login</button>
+        <button class="option-btn doctor-login" onclick="window.location.href='#loginModal'">👨‍⚕️ Doctor Login</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
+    <div class="modal-header">
+      <h2>🔐 Staff Login</h2>
+      <p>Access Hospital Management System</p>
+    </div>
+    <form class="login-form">
+      <div class="input-group">
+        <input type="text" placeholder="Username" required />
+        <span class="input-icon">👤</span>
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Password" required />
+        <span class="input-icon">🔒</span>
+      </div>
+      <button type="submit" class="login-submit">Login</button>
+
+      <div class="login-options">
+        <a href="#">Forgot Password?SignUp</a>
+      </div>
+
+      <!-- Divider -->
+      <div class="or-center">
+        <span>or</span>
+      </div>
+
+      <!-- Social Login -->
+      <div class="social-login">
+        <button type="button" class="google-login">
+          <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google Logo"/>
+          Login with Google
+        </button>
+        <button type="button" class="email-login">
+          📧 Login with Email
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- About Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close-btn">&times;</a>
+      <div class="modal-header">
+        <h2>🏥 About Dermaco Hospital</h2>
+        <p>Excellence in Healthcare since 1990</p>
+      </div>
+      <p>Dermaco Hospital is committed to providing the highest quality healthcare services with compassion and professionalism. Our dedicated team of medical experts and staff work tirelessly to ensure the well-being of our patients.</p>
+      <p>We offer a wide range of medical specialties and state-of-the-art facilities to meet the diverse needs of our community.</p>
+      <p>Contact us at info@dermacohospital.com or call 123-456-7890 for more information.</p>
+    </div>
+  </div>
+
+  <!-- Patient Login Modal -->
+  <div id="patientLoginModal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close-btn">&times;</a>
+      <div class="modal-header">
+        <h2>🔐 Patient Login</h2>
+        <p>Access your patient portal</p>
+      </div>
+      <form class="login-form">
+        <div class="input-group">
+          <input type="text" placeholder="Patient ID" required />
+          <span class="input-icon">🆔</span>
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Password" required />
+          <span class="input-icon">🔒</span>
+        </div>
+        <button type="submit" class="login-submit">Login</button>
+        
+
+        <div class="login-options">
+          <a href="#">Forgot Password?SignUp</a>
+        </div>
+        <div class="or-center">
+        <span>or</span>
+        </div>
+        <div class="social-login">
+        <button type="button" class="google-login">
+          <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google Logo"/>
+          Login with Google
+        </button>
+        <button type="button" class="email-login">
+          📧 Login with Email
+        </button>
+      </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+  </body>
+</html>
